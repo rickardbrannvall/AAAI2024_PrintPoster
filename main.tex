@@ -1,8 +1,8 @@
 
 \documentclass[12pt,oneside]{book}
 
-%\usepackage[a4paper,margin=1cm,nohead,foot=0.5cm]{geometry}
-\usepackage[legalpaper,margin=1cm,nohead,foot=0.5cm]{geometry}
+\usepackage[a4paper,margin=1cm,nohead,foot=0.5cm]{geometry}
+%\usepackage[legalpaper,margin=1cm,nohead,foot=0.5cm]{geometry}
 
 \usepackage{graphicx}				% For adding images
 \usepackage{float}					% For using float environments
@@ -35,16 +35,20 @@
 \begin{center}
     \Huge \textbf{Short Version}
 \end{center}    
-\huge
+\Large
 \noindent
-\textbf{Motivation}: Quantized Transformer that doesn't use Dot-product and Softmax.
-\vspace{0.2cm}
+\textbf{Motivation}: \begin{itemize}
+    \item Quantized Transformer that doesn't use Dot-product and Softmax.
+\end{itemize}
+%\vspace{0.2cm}
 
 \noindent
 \textbf{Basic idea}: 
 %Let $u_t = W x_t + U h_{t-1} + b$ and change gated RNNs according to
 %Take Manhattan distance $\left|Q_{ik} - K_{jk}\right|$ instead of Dot-prod, and  
-Replace Dot-prod similarity with Manhattan distance and Softmax with ReLU
+\begin{itemize}
+    \item Replace Dot-prod with Manhattan distance and Softmax with ReLU
+\end{itemize}
 \begin{equation*}
 Q K^T \rightarrow \sum\nolimits_{k} \left|Q_{ik} - K_{jk}\right|
 \end{equation*}
@@ -80,7 +84,10 @@ Q K^T \rightarrow \sum\nolimits_{k} \left|Q_{ik} - K_{jk}\right|
 \end{itemize}
 
 \noindent
-\textbf{Future work}: Train larger models like BERT, GPT and Vision Transformer.
+\textbf{Future work}: 
+\begin{itemize}
+    \item Train larger models like BERT, GPT and Vision Transformer.
+\end{itemize}
 
 \iffalse
 \begin{figure}[H]
