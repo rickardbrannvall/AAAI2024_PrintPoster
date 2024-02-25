@@ -1,0 +1,47 @@
+
+\documentclass[12pt,oneside]{book}
+
+\usepackage[a4paper,margin=1cm,nohead,foot=0.5cm]{geometry}
+%\usepackage[legalpaper,margin=1cm,nohead,foot=0.5cm]{geometry}
+
+\usepackage{graphicx}				% For adding images
+\usepackage{float}					% For using float environments
+\usepackage{booktabs}				% For table rules
+\usepackage{times}					% For times font
+\usepackage{lipsum}					% For generating random text
+
+\usepackage{framed}
+\usepackage{enumitem}
+
+
+\usepackage{xcolor}         % colors
+\usepackage{csvsimple}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\newcommand\sig[0]{\sigma}
+\newcommand\act[1]{\phi_{#1}}
+
+\newcommand\todo[1]{\textcolor{blue}{TODO: #1}}
+\newcommand\edit[1]{{\color{blue} EDIT: }{\color{gray} #1}}
+
+\pagestyle{plain}
+\thispagestyle{empty}
+
+\begin{document}
+
+
+\begin{table}
+    \centering
+    \begin{tabular}{ccc}
+        Poster Repository & 
+        Inhibitor Transformer &
+        Inhibitor GRU + TFHE\\
+        \includegraphics[width=0.3\columnwidth]{qrcode_github.printposter.png} & 
+        \includegraphics[width=0.3\columnwidth]{qrcode_arxiv.TheInhibitor.png} &
+        \includegraphics[width=0.3\columnwidth]{qrcode_arxiv.iGRUforTFHE.png} \\
+    \end{tabular}
+\end{table}
+ 
+\end{document}
+
