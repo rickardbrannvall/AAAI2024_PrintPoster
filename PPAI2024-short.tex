@@ -33,12 +33,12 @@
 \begin{framed}
 %\begin{minipage}{\textwidth}
 \begin{center}
-    \Huge \textbf{Short Version}
+    \Huge \textbf{Inhibitor Gated RNNs -- Short Version}
 \end{center}    
 \Large
 \noindent
 \textbf{Motivation}: \begin{itemize}
-    \item Quantized Transformer that doesn't use Dot-product and Softmax.
+    \item Quantized Gated RNNs that doesn't use Dot-product and Sigmoid.
 \end{itemize}
 %\vspace{0.2cm}
 
@@ -65,6 +65,7 @@ Q K^T \rightarrow \sum\nolimits_{k} \left|Q_{ik} - K_{jk}\right|
     \item Reminiscent of subtractive inhibition in biological neurons.
     %\item The mechanism has similar limit behaviour as the conventional.
     \item Removes variable multiplication and require only \textit{half} precision.
+    \item In the limits the modified gates behaves like the conventional.
 \end{itemize}
 
 \noindent
@@ -80,13 +81,13 @@ Q K^T \rightarrow \sum\nolimits_{k} \left|Q_{ik} - K_{jk}\right|
 \textbf{Potential}: 
 \begin{itemize}
     \item Natural integer quantization for deployment under resource constraints.
-    \item May enable end-to-end encrypted Transformer applications.
+    \item May enable end-to-end encrypted applications of Gated RNNs.
 \end{itemize}
 
 \noindent
 \textbf{Future work}: 
 \begin{itemize}
-    \item Train larger models like BERT, GPT and Vision Transformer.
+    \item Does this architecture generalize to transformers? Answer: Yes.
 \end{itemize}
 
 \iffalse
